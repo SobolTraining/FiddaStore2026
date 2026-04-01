@@ -209,6 +209,68 @@ function renderProducts(products, targetContainer = productsContainer) {
         return;
     }
 
+    /*/displayProducts.forEach(product => {
+        const finalPrice = product.discountedPrice !== null ? product.discountedPrice : product.price;
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        // شلنا الـ parseInt كرمال الـ IDs مثل AB-001 تضل شغالة
+        card.setAttribute('id', `product-${product.itemID}`);
+
+        const stockInfo = getStockStatus(product.inStock ? 10 : 0, product.itemID);
+
+        let sizeOptions = product.availableSizes || [];
+        let optionsHTML = `<option value="" disabled selected>اختر</option>`;
+        optionsHTML += sizeOptions.map(size => `<option value="${size}">${size}</option>`).join('');
+        // توليد صور السلايدر
+        const imagesHTML = product.imageURLs && product.imageURLs.length > 0
+            ? product.imageURLs.map(url => `<img src="${url}" alt="${product.nameAR}" loading="lazy">`).join('')
+            : `<img src="logo.png" alt="${product.nameAR}">`;
+
+        // توليد النقاط (Dots) إذا وجد أكثر من صورة
+        const dotsHTML = product.imageURLs && product.imageURLs.length > 1
+            ? `<div class="slider-dots">${product.imageURLs.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}"></span>`).join('')}</div>`
+            : '';
+
+        const priceHTML = product.discountedPrice !== null
+            ? `<div class="price-group">
+                  <span class="new-price">${finalPrice.toFixed(2)} ${CURRENCY}</span>
+                  <span class="old-price">${product.price.toFixed(2)} ${CURRENCY}</span>
+               </div>`
+            : `<span class="new-price">${product.price.toFixed(2)} ${CURRENCY}</span>`;
+
+        // توليد النقاط (Dots) إذا وجد أكثر من صورة
+        const dotsHTML = (product.imageURLs && product.imageURLs.length > 1) 
+            ? `<div class="slider-dots">${product.imageURLs.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}"></span>`).join('')}</div>`
+            : '';
+
+        // بناء الـ HTML النهائي للكرت
+        card.innerHTML = `
+            <div class="product-image" onscroll="updateDots(this)">
+                ${imagesHTML}
+                ${dotsHTML}
+                ${product.discountedPrice !== null ? '<span class="discount-badge">خصم!</span>' : ''}
+            </div>
+            <div class="product-details">
+                <h3 class="product-name">${product.nameAR}</h3>
+                <div class="horizontal-info-row">
+                    <div class="size-select-group">
+                        <select id="size-${product.itemID}" class="size-select" data-id="${product.itemID}">${optionsHTML}</select>
+                    </div>
+                    <span class="view-details-link" data-product-id="${product.itemID}">التفاصيل</span>                
+                    <div class="price-group">
+                        <span class="new-price">${finalPrice.toFixed(2)} $</span>
+                        ${product.discountedPrice !== null ? `<span class="old-price">${product.price.toFixed(2)} $</span>` : ''}
+                    </div>
+                </div>
+                <p class="stock-status-display">${stockInfo.statusText}</p>
+                ${stockInfo.buttonHTML}
+            </div>
+        ;`
+
+        // إضافة الكرت للحاوية
+        targetContainer.appendChild(card);
+                attachProductButtonsEvents();
+        });*/
         displayProducts.forEach(product => {
         const finalPrice = product.discountedPrice !== null ? product.discountedPrice : product.price;
         const card = document.createElement('div');
@@ -695,7 +757,7 @@ async function submitOrder(e) {
     }
     
     const formData = {
-        "الاسم ": customerName,
+        "اسم العميل": customerName,
         "الهاتف": phoneCode + phoneNumber,
         "المنطقة": region, 
         "العنوان المفصل": address,
@@ -727,7 +789,7 @@ async function submitOrder(e) {
             window.scrollTo(0, 0); 
 
         } else {
-            alert('عذراً، حدث خطأ أثناء إرسال الطلب. يرجى المحاولة لاحقاً أو التواصل معنا مباشرة 71406929.');
+            alert('عذراً، حدث خطأ أثناء إرسال الطلب. يرجى المحاولة لاحقاً أو التواصل معنا مباشرة.');
         }
     } catch (error) {
         console.error('Submit error:', error);
