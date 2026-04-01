@@ -1,803 +1,211 @@
-
-
-/* ============================= */
-/* 1. الإعدادات العامة والتخطيط الأساسي */
-/* ============================= */
-:root {
-    --primary-color: #a0522d; /* لون ترابي أساسي (Sienna) */
-    --secondary-color: #5d4037; /* لون ترابي داكن (Brown) */
-    --background-light: #fdf5e6; /* لون خلفية فاتح (Old Lace) */
-    --text-dark: #333;
-    --text-light: #fff;
-    --accent-gold: #ffd700;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Cairo', sans-serif;
-    background-color: var(--background-light);
-    color: var(--text-dark);
-    direction: rtl; /* دعم اللغة العربية */
-    line-height: 1.6;
-}
-
-/* ============================= */
-/* 2. شريط التنقل العلوي الثابت (Header) */
-/* ============================= */
-#main-header {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    padding: 10px 40px;
-    display: flex;
-    flex-direction: column; /* جعل العناصر تتكدس عمودياً بشكل افتراضي */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* الصف العلوي (الشعار والسلة) */
-.header-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px; /* فصله عن شريطي التنقل */
-}
-
-.logo h1 {
-    font-size: 24px;
-    margin: 0;
-    color: var(--background-light);
-}
-
-#cart-btn {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
-    min-width: 90px;
-    text-align: center;
-}
-
-#cart-btn:hover {
-    background-color: var(--accent-gold);
-    color: var(--secondary-color);
-}
-
-/* حاوية شرائط التنقل (يتم وضعها أفقياً على اللابتوب) */
-#navigation-bars-container {
-    display: flex;
-    gap: 30px; /* مسافة بين شريطي التنقل */
-    width: 100%;
-    justify-content: space-between;
-}
-
-.main-nav-group {
-    flex: 1; /* لجعل كل شريط يأخذ مساحة متساوية */
-}
-
-.main-nav-list-ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around; /* توزيع الأقسام داخل الشريط بالتساوي */
-    gap: 10px;
-}
-
-.main-nav-list-ul .nav-item {
-    color: var(--background-light);
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: color 0.3s, border-bottom 0.3s;
-    white-space: nowrap; 
-    cursor: pointer;
-}
-
-.main-nav-list-ul .nav-item:hover,
-.main-nav-list-ul .nav-item.active-category {
-    color: var(--accent-gold);
-    border-bottom: 2px solid var(--accent-gold);
-}
-
-
-/* تعديل Media Query لدعم تكديس شريطي التنقل عمودياً على الهاتف */
-@media (max-width: 768px) {
-    /* ... (بقية التنسيقات تبقى كما هي) ... */
-    #products-container, .suggestion-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    /* تكديس شرائط التنقل فوق بعضها البعض على الهاتف */
-    #navigation-bars-container {
-        flex-direction: column; 
-        gap: 10px; 
-    }
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر فضة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style-v2-test.css">
+    <link rel="stylesheet" href="style-v2-test.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/modals.css">
     
-    /* جعل العناصر داخل كل شريط تنقل تظهر بشكل طبيعي (قد تحتاج لـ flex-wrap إذا كانت الأقسام طويلة) */
-    .main-nav-list-ul {
-        justify-content: flex-start; /* تبدأ من اليمين بدلاً من التوزيع */
-        overflow-x: auto; 
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        padding-bottom: 5px;
-    }
-    
-    /* إخفاء شريط التمرير */
-    .main-nav-list-ul::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-
-/* ============================= */
-/* 3. حاوية المحتوى الرئيسي والتقسيم */
-/* ============================= */
-.main-container {
-    padding: 20px 40px;
-    display: flex; 
-    gap: 30px;
-}
-
-/* 3أ. الشريط الجانبي (Side Nav) */
-#side-nav-container {
-    width: 250px; 
-    min-width: 250px;
-    background-color: var(--text-light);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    height: fit-content; 
-    position: sticky; 
-    top: 80px; 
-}
-
-.side-nav-header h4 {
-    color: var(--secondary-color);
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-#sub-category-list {
-    list-style: none;
-}
-
-.filter-item {
-    padding: 8px 0;
-    cursor: pointer;
-    transition: color 0.2s, background-color 0.2s;
-    border-radius: 4px;
-    padding: 8px 10px;
-    margin: 5px 0;
-}
-
-.filter-item:hover,
-.filter-item.active {
-    background-color: var(--background-light);
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-
-/* 3ب. المنطقة الوسطى (Main Content Areas) */
-.main-content-areas {
-    flex-grow: 1;
-    display: flex; 
-    flex-direction: column;
-    gap: 30px; 
-}
-
-/* البانر الإعلاني */
-#promo-carousel-container {
-    background-color: #d1b8a5; 
-    color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.section-title {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-/* ============================= */
-/* 4. تنسيق بطاقات المنتجات (مرونة الأبعاد) - الهيكل المُصحَّح */
-/* ============================= */
-
-#products-container,
-.suggestion-grid {
-    display: grid;
-    /* غيرنا الـ repeat من 3 لـ 4 */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; /* قللنا المسافة شوي لتناسب الـ 4 قطع */
-}
-
-
-.product-card {
-    background-color: var(--text-light);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s;
-    position: relative; 
-    /* cursor: pointer; */ 
-    display: flex; /* زدنا هيدي */
-    flex-direction: column; /* زدنا هيدي */
-    height: 100%; /* زدنا هيدي لتوحيد الطول */
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.product-image {
-    height: 220px; /* صغرنا الارتفاع شوي ليناسب الـ 4 قطع */
-    display: flex; /* للسماح بالصور حد بعض */
-    overflow-x: auto; /* لتفعيل السحب ken hidden*/ 
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-}
-.product-image::-webkit-scrollbar { display: none; }
-
-.product-image img {
-    min-width: 100%; /* ضروري للسحب */
-    height: 100%;
-    object-fit: cover;
-    scroll-snap-align: start;
-    /*transition: transform 0.5s;*/
-}
-
-
-
-.product-card:hover .product-image img {
-    transform: scale(1.05);
-}
-
-.discount-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #e74c3c;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-.product-details {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* هيدي بتخلي المساحة تتعبى وتدفع الزر لتحت */
-    gap: 8px; 
-    /* تم زيادة الارتفاع بشكل نهائي لضمان استيعاب سطرين السعر */
-    height: 200px; /* تم زيادته من 190px إلى 200px */
-    margin-bottom: 5px; /* إضافة هامش سفلي خفيف لتحسين المظهر */
-}
-
-
-.product-name {
-    font-size: 18px;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical;
-    min-height: 40px; 
-}
-
-/* تنسيق سطر المقاسات، السعر، والتفاصيل (السطر الأوسط المُصحَّح) */
-
-.horizontal-info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* ليكونوا على نص السطر */
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px dashed #eee;
-    flex-wrap: nowrap; /* ممنوع ينزل سطر جديد مهما صار */
-    gap: 5px;
-}
-
-.size-select-group {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    min-width: 90px; 
-}
-
-.view-details-link {
-    font-size: 13px;
-    color: var(--primary-color);
-    cursor: pointer;
-    text-decoration: underline;
-    white-space: nowrap;
-    margin-top: 5px; 
-    flex-shrink: 0;
-}
-
-.price-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-}
-
-.current-price, .new-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-.new-price {
-    font-size: 16px; /* بدل 18px إذا لزم الأمر */
-    white-space: nowrap; /* عشان ما ينقسم الرقم */
-}
-
-
-.old-price {
-    font-size: 12px; 
-    color: #999;
-    text-decoration: line-through;
-    margin-bottom: -5px; 
-}
-
-.stock-status-display {
-    font-size: 14px;
-    font-weight: bold;
-    min-height: 20px;
-    margin-top: -5px;
-    text-align: center; 
-}
-
-.size-select {
-    padding: 3px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 13px;
-}
-
-.add-to-cart-btn {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: none;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: auto; 
-    width: 100%;
-    font-weight: bold;
-}
-
-
-.add-to-cart-btn:hover {
-    background-color: var(--secondary-color);
-}
-
-/* ... (تنسيق add-to-cart-btn يبقى كما هو) ... */
-/* ============================= */
-/* 5. نافذة الدفع المؤقتة (Modal) */
-/* ============================= */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 2000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.5); 
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 50px auto; 
-    padding: 20px;
-    border-radius: 10px;
-    width: 500px; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.close-btn {
-    color: #aaa;
-    float: left;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-content h2 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-/* تنسيق عناصر السلة داخل المودال */
-#checkout-details {
-    margin-bottom: 20px;
-    border: 1px solid #eee;
-    padding: 10px;
-    border-radius: 5px;
-    max-height: 250px;
-    overflow-y: auto;
-}
-
-.checkout-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px dashed #eee;
-    padding: 10px 0;
-    cursor: pointer; /* لإعطاء إشارة أنه يمكن النقر للعرض */
-}
-
-.checkout-item:last-child {
-    border-bottom: none;
-}
-
-.item-info p {
-    margin: 2px 0;
-    font-size: 14px;
-}
-
-.item-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.qty-btn {
-    background: var(--background-light);
-    border: 1px solid #ccc;
-    color: var(--text-dark);
-    padding: 2px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.delete-btn {
-    background: #e74c3c;
-    color: var(--text-light);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-/* ملخص الفواتير */
-.summary-line {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    font-size: 15px;
-}
-
-.total-line {
-    font-size: 18px;
-    font-weight: bold;
-    border-top: 2px solid var(--primary-color);
-    margin-top: 10px;
-    padding-top: 10px;
-    color: var(--secondary-color);
-}
-
-/* نموذج الدفع (Form) */
-#checkout-form input[type="text"],
-#checkout-form textarea { /* تم حذف input[type="email"] */
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    font-family: 'Cairo', sans-serif;
-}
-
-/* تنسيق قائمة اختيار المنطقة */
-#region-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    font-family: 'Cairo', sans-serif;
-    background-color: white;
-}
-
-.phone-input-group {
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.country-code {
-    background-color: #eee;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    white-space: nowrap;
-    font-weight: bold;
-    color: #555;
-}
-
-.phone-input-group input {
-    flex-grow: 1;
-    border-radius: 0 5px 5px 0;
-    margin-bottom: 0 !important;
-}
-
-.promo-code-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-#promo-code-input {
-    flex-grow: 1;
-    margin-bottom: 0 !important;
-}
-
-#apply-promo-btn {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.cta-button {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: var(--secondary-color);
-}
-
-.note {
-    font-size: 12px;
-    color: #777;
-    text-align: center;
-    margin-top: 10px;
-}
-
-
-
-/* ================================================= */
-/* 5.1. تنسيقات مودال تفاصيل المنتج (Product Details) */
-/* ================================================= */
-
-/* نستخدم تنسيقات .checkout-modal الأساسية لتحديد لون الخلفية والظلال */
-.product-modal-content {
-    /* زيادة عرض المودال ليتسع للصورة والمعلومات جنباً إلى جنب */
-    max-width: 900px !important; 
-    padding: 30px;
-}
-
-/* تنسيق الحاوية الرئيسية لجعل الصورة والمعلومات بجانب بعضهما (Flexbox) */
-.product-details-container {
-    display: flex;
-    gap: 30px;
-    direction: rtl; 
-}
-
-/* قسم الصورة */
-.modal-product-image-section {
-    flex: 1; /* يأخذ جزءاً من المساحة */
-    text-align: center;
-}
-
-.modal-product-image {
-    width: 100%;
-    max-height: 350px; /* لتقليل ارتفاع الصورة قليلاً */
-    object-fit: contain;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.modal-product-name {
-    color: var(--secondary-color);
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* قسم المعلومات */
-.modal-product-info-section {
-    flex: 1.5; /* نعطي هذا القسم مساحة أكبر لعرض النصوص والتفاصيل */
-    display: flex;
-    flex-direction: column;
-}
-
-.section-title {
-    color: var(--primary-color);
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.modal-product-description {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-.modal-price-status-section {
-    margin-bottom: 20px;
-}
-
-.modal-actions-section {
-    margin-top: 10px;
-}
-
-/* تعديل تنسيق السعر والمخزون ليتناسب مع المودال */
-.modal-product-info-section .price-section {
-    justify-content: flex-start; /* لجعل السعر يبدأ من اليمين */
-}
-
-/* تنسيق المقاس والزر داخل المودال ليأخذا عرض 100% */
-.modal-actions-section .size-select,
-.modal-actions-section .add-to-cart-btn {
-    width: 100%;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.modal-actions-section .add-to-cart-btn {
-    padding: 12px;
-}
-
-
-/* تنسيقات شاشات الهاتف (تعديل بسيط لـ Product Modal) */
-@media (max-width: 768px) {
-    
-    .product-modal-content {
-        max-width: 95% !important; 
-        padding: 20px;
-    }
-    
-    .product-details-container {
-        flex-direction: column; /* تحويل العرض إلى عمودي على الموبايل */
-        gap: 15px;
-    }
-}
-
-
-/* ============================= */
-/* 6. تذييل الصفحة (Footer) */
-/* ============================= */
-#main-footer {
-    background-color: var(--secondary-color);
-    color: var(--background-light);
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-    font-size: 14px;
-}
-
-/* ============================= */
-/* 7. استجابة التصميم (Media Queries) */
-/* ============================= */
-
-/* عند الشاشات الصغيرة (الهواتف) */
-@media (max-width: 768px) {
-    #main-header {
-        padding: 10px 20px;
-        flex-wrap: wrap; 
-    }
-    
-    #main-nav-list {
-        order: 3; 
-        width: 100%;
-        justify-content: flex-start; /* تغيير التوزيع لدعم التمرير */
-        margin-top: 10px;
-        margin-right: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        padding-top: 10px;
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-top-row">
+            <div class="logo">
+                <h1>متجر فضة</h1>
+            </div>
+            
+            <div id="cart-btn">
+                <i class="fas fa-shopping-cart"></i> السلة (<span id="cart-count">0</span>)
+            </div>
+        </div>
+
+        <div id="navigation-bars-container">
+            <nav id="nav-group-1" class="main-nav-group">
+                <ul class="main-nav-list-ul">
+                    <li class="nav-item" data-category="Prayer">مستلزمات الصلاة</li>
+                    <li class="nav-item" data-category="AbayaEssentials">العباءة ومستلزماتها</li>
+                    <li class="nav-item" data-category="Library">المكتبة</li>
+                    <li class="nav-item" data-category="Bags">الحقائب</li>
+                </ul>
+            </nav>
+            <nav id="nav-group-2" class="main-nav-group">
+                <ul class="main-nav-list-ul">
+                    <li class="nav-item" data-category="Almokallafat">المكلفات</li>
+                    <li class="nav-item" data-category="Gifts">هدايا وتحف</li>
+                    <li class="nav-item" data-category="Almunasabat">المناسبات الدينية</li>
+                    <li class="nav-item" data-category="">قريبا</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
         
-        /* تفعيل التمرير الأفقي (Horizontal Scrolling) */
-        overflow-x: auto; 
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-        flex-wrap: nowrap; /* منع نزول الأقسام لسطر جديد */
-    }
-    
-    /* إخفاء شريط التمرير في المتصفحات التي تدعم -webkit */
-    #main-nav-list::-webkit-scrollbar {
-        display: none;
-    }
+        <aside id="side-nav-container">
+            <div class="side-nav-header">
+                <h4>تصفية حسب الأقسام الفرعية:</h4>
+            </div>
+            <ul id="sub-category-list">
+                </ul>
+        </aside>
 
-    .main-container {
-        flex-direction: column; 
-        padding: 10px 20px;
-        gap: 20px;
-    }
+        <div class="main-content-areas">
 
-    #side-nav-container {
-        width: 100%;
-        min-width: unset;
-        position: static; 
-        top: auto;
-        padding: 10px;
-    }
+            <section id="promo-carousel-container">
+               سيمرّ كلّ مر، وأجر صمودكم يبقى  
+            </section>
+
+            <section id="products-section">
+                <h2 class="section-title">
+                   أهلا بكنّ: العروضات الكبيرة مستمرة لمدة يومين في قسم العباءة ومستلزماتها،الحسومات مساهمة عن ارواح شهدائنا الأعزاء 
+                </h2>
+                
+                <h1 class="section-title">
+                   ملاحظة: 
+                   النقشات عديدة ومختلفة لعباءات الكتف دوبل كلوش (الاختلاف عند الكم)
+                   + النقشات عديدة لدانتيل الايشاربات 
+                                     
+                   --- سيتم التواصل معكم عبر الواتساب بعد تأكيد الطلب لتثبيت التفاصيل
+                </h1>
+            </section>
+
+            <section id="products-section">
+                <h2 class="section-title">جميع منتجات هذا القسم</h2>
+                <div id="products-container">
+                    </div>
+            </section>
+            
+
+            
+            
+        </div>
+
+    </main>
     
-    /* تثبيت عمودين فقط على شاشات الهاتف باستخدام الوحدات المرنة */
-    #products-container,
-    .suggestion-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .modal-content {
-        margin: 20px auto;
-        width: 95%; 
-        padding: 15px;
-    }
-    
-    .logo h1 {
-        font-size: 20px;
-    }
-}
-/* كلاس يتم تطبيقه عند نسيان اختيار المقاس */
-.size-select.required-highlight {
-    border: 3px solid #e74c3c !important; /* إطار أحمر سميك */
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.7); /* ظل خفيف لتحسين الرؤية */
-    transition: border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-}
-.slider-dots {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 4px;
-    pointer-events: none; /* عشان ما تعيق السحب */
-}
-.dot { 
-    width: 6px; 
-    height: 6px; 
-    background: rgba(255,255,255,0.5); 
-    border-radius: 50%; 
-}
-.dot.active { 
-    background: var(--primary-color); 
-    width: 12px; 
-    border-radius: 3px; 
-}
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>إتمام عملية الشراء</h2>
+
+            <div id="checkout-details">
+                </div>
+
+            <div class="invoice-summary">
+                <div class="summary-line">
+                    <span>الإجمالي:</span>
+                    <span id="subtotal">$ 0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>الخصم:</span>
+                    <span id="discount-amount">$ 0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>رسوم التوصيل:</span>
+                    <span id="shipping-fee">$ 4.00</span>
+                </div>
+                <div class="total-line">
+                    <span>المجموع الكلي:</span>
+                    <span id="final-total">$ 4.00</span>
+                </div>
+            </div>
+
+            <hr style="margin: 15px 0;">
+
+            <form id="checkout-form">
+                
+                <input type="text" id="name" placeholder="الاسم الكامل *" required>
+                
+                <div class="phone-input-group">
+                    <span class="country-code">+961</span> 
+                    <input type="text" id="phone" placeholder="رقم الهاتف (للتواصل 8 أرقام) *" required pattern="[0-9]{8}" minlength="8" maxlength="8">
+                </div>
+                
+                <select id="region-select" required>
+                    <option value="" disabled selected>--- اختر المنطقة * ---</option>
+                    <option value="Beirut">بيروت</option>
+                    <option value="Saida">صيدا</option>
+                    <option value="Sour">صور</option>
+                    <option value="Nabatieh">النبطية</option>
+                    <option value="Other">مناطق أخرى</option>
+                </select>
+
+                <textarea id="address" placeholder="العنوان بالكامل (الحي، الشارع) *" rows="3" required></textarea>
+
+                <div class="promo-code-container">
+                    <input type="text" id="promo-code-input" placeholder="رمز الخصم (اختياري)">
+                    <button type="button" id="apply-promo-btn">تطبيق</button>
+                </div>
+
+                <textarea id="notes" placeholder="ملاحظات إضافية (اختياري)" rows="2"></textarea>
+                
+                <button type="submit" class="cta-button">إتمام الطلب الآن</button>
+                <p class="note">سيتم التواصل معك لتأكيد الطلب وتفاصيل الدفع.</p>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="product-details-modal" class="modal">
+    <div class="checkout-modal product-modal-content">
+        <button class="close-modal-btn" data-modal-id="product-details-modal">&times;</button>
+        
+        <div class="product-details-container">
+            
+            <div class="modal-product-image-section">
+                <img id="modal-product-image" src="" alt="صورة المنتج" class="modal-product-image">
+                <h2 id="modal-product-name" class="modal-product-name">اسم المنتج</h2>
+            </div>
+            
+            <div class="modal-product-info-section">
+                
+                <p class="section-title">الوصف المفصَّل:</p>
+                <div id="modal-product-description" class="modal-product-description">
+                    </div>
+                
+                <hr>
+
+                <div class="modal-price-status-section">
+                    <p class="section-title">السعر:</p>
+                    <div class="price-section">
+                        <span id="modal-current-price" class="current-price">$ 0.00</span>
+                        <span id="modal-old-price" class="old-price"></span>
+                    </div>
+                    <div id="modal-stock-status" class="stock-status in-stock">
+                        </div>
+                </div>
+
+                <hr>
+                
+                <div class="modal-actions-section">
+                    
+                    <p class="section-title">خيارات الشراء:</p>
+                    
+                    <select id="modal-size-select" class="size-select" required>
+                        <option value="" disabled selected>--- اختر المقاس/النوع * ---</option>
+                        </select>
+
+                    <button type="button" id="modal-add-to-cart-btn" class="add-to-cart-btn">أضف للسلة</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <footer id="main-footer">
+        جميع الحقوق محفوظة &copy; متجر فضة 2026 | نسخة مؤقتة
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
