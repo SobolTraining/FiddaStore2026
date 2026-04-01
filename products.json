@@ -36,7 +36,7 @@
     ],
     "defaultVariantID": "60",
     "imageURLs": [
-      "itemimages/abaya/ras/kenzo.jpeg"
+      "./itemimages/abaya/ras/kenzo.jpeg"
     ],
     "descriptionAR": "مفتوحة,مسكرة",
     "inStock": true,
@@ -57,7 +57,7 @@
       "3"
     ],
      "imageURLs": [
-      "itemimages/abaya/ras/ruba.jpeg"
+      "./itemimages/abaya/ras/ruba.jpeg"
     ],
     "descriptionAR": "عملية, يومية ومرتبة - متوفرة مسكرة ومفتوحة قصة لبنانية وعراقية",
     "inStock": true,
@@ -76,7 +76,7 @@
       "64"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/badr.jpeg"
+      "./itemimages/abaya/ras/badr.jpeg"
     ],
     "descriptionAR": "حرير اندونيسي سواد رائع ووزن خفيف على الرأس - متوفرة فجة وفجتين مفتوح - وفجة مسكر",
     "inStock": true,
@@ -97,7 +97,7 @@
       "64"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/sawadlel.jpeg"
+      "./itemimages/abaya/ras/sawadlel.jpeg"
     ],
     "descriptionAR": "الأخف على الرأس: فجة - سواد قوي وصفر لمعة - خيار رائع",
     "inStock": true,
@@ -117,7 +117,7 @@
       "65"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/almas.jpeg"
+      "./itemimages/abaya/ras/almas.jpeg"
     ],
     "descriptionAR": "الأخف على الرأس: فجتين - سواد قوي وصفر لمعة - عباءة كويتية فاخرة",
     "inStock": true,
@@ -140,9 +140,9 @@
       "64"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/fattum1.jpeg",
-      "itemimages/abaya/ras/fattum2.jpeg",
-      "itemimages/abaya/ras/fattum3.jpeg"
+      "./itemimages/abaya/ras/fattum1.jpeg",
+      "./itemimages/abaya/ras/fattum2.jpeg",
+      "./itemimages/abaya/ras/fattum3.jpeg"
     ],
     "descriptionAR": "فطوم تقيل - خفيفة جدا على الرأس ولا تخايل - ",
     "inStock": true,
@@ -162,7 +162,7 @@
       "64"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/superfine.jpeg"
+      "./itemimages/abaya/ras/superfine.jpeg"
     ],
     "descriptionAR": "عباءة كويتية فجتين فقط - لمعة - خفيفة جدا على الرأس",
     "inStock": true,
@@ -183,7 +183,7 @@
       "66"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/sawadlel2.jpeg"
+      "./itemimages/abaya/ras/sawadlel2.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 64
@@ -201,9 +201,9 @@
       "64"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/ashrafeye1.jpeg",
-      "itemimages/abaya/ras/ashrafeye2.jpeg",
-      "itemimages/abaya/ras/ashrafeye3.jpeg"
+      "./itemimages/abaya/ras/ashrafeye1.jpeg",
+      "./itemimages/abaya/ras/ashrafeye2.jpeg",
+      "./itemimages/abaya/ras/ashrafeye3.jpeg"
     ],
     "descriptionAR": "العباءة الفاخرة رقم 1 - احفظي اسمها جيّدا",
     "inStock": true,
@@ -230,7 +230,7 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/ktfwes3a.jpeg"
+      "./itemimages/abaya/ktf/ktfwes3a.jpeg"
     ],
     "descriptionAR": "الأكمام بدون ستراس",
     "inStock": true,
@@ -251,9 +251,9 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/versacci7arir.jpeg",
-      "itemimages/abaya/ktf/doubleklosh1.jpeg",
-      "itemimages/abaya/ktf/doubleklosh2.jpeg"
+      "./itemimages/abaya/ktf/versacci7arir.jpeg",
+      "./itemimages/abaya/ktf/doubleklosh1.jpeg",
+      "./itemimages/abaya/ktf/doubleklosh2.jpeg"
     ],
     "descriptionAR": "قصة دوبل كلوش - الاختلاف بنقشة الاكمام",
     "inStock": true,
@@ -274,8 +274,8 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/doubleklosh1.jpeg",
-      "itemimages/abaya/ktf/doubleklosh2.jpeg"
+      "./itemimages/abaya/ktf/doubleklosh1.jpeg",
+      "./itemimages/abaya/ktf/doubleklosh2.jpeg"
     ],
     "descriptionAR": "قصة دوبل كلوش - الاختلاف بنقشة الاكمام",
     "inStock": true,
@@ -296,7 +296,7 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/farashe.jpeg"
+      "./itemimages/abaya/ktf/farashe.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 24.92
@@ -316,7 +316,7 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/huda1.jpeg"
+      "./itemimages/abaya/ktf/huda1.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 32.3
@@ -336,7 +336,7 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/se7ab.jpeg"
+      "./itemimages/abaya/ktf/se7ab.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 24.92
@@ -356,7 +356,7 @@
       "3"
     ],
     "imageURLs": [
-      "itemimages/abaya/ktf/se7ab.jpeg"
+      "./itemimages/abaya/ktf/se7ab.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 32.3
@@ -367,7 +367,7 @@
     "subCategory": ["إضافات الزي (دبابيس، كلساتات)"],
     "nameAR": "قمطة سوداء super",
     "price": 1,
-    "imageURLs": ["itemimages/amta.jpeg"],
+    "imageURLs": ["./itemimages/amta.jpeg"],
     "inStock": true,
     "discountedPrice": 1,
     "availableSizes": [
@@ -388,7 +388,7 @@
       "L-XL"
     ],
     "imageURLs": [
-      "itemimages/tanura.jpeg"
+      "./itemimages/tanura.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 7
@@ -412,7 +412,7 @@
       "كبير"
     ],
     "imageURLs": [
-      "itemimages/isharb/crep.jpeg"
+      "./itemimages/isharb/crep.jpeg"
     ]
   },
   "IR-712": {
@@ -429,7 +429,7 @@
     "inStock": true,
     "discountedPrice": 9,
     "imageURLs": [
-      "itemimages/isharb/crepd1.jpeg"
+      "./itemimages/isharb/crepd1.jpeg"
     ]
   },
 
@@ -444,7 +444,7 @@
       "كبير"
     ],
     "imageURLs": [
-      "itemimages/isharb/5alijiseda.jpeg"
+      "./itemimages/isharb/5alijiseda.jpeg"
     ],
     "inStock": true,
     "discountedPrice": 10
@@ -458,7 +458,7 @@
     "nameAR": "خليجي دانتيل ",
     "price": 17,
     "imageURLs": [
-      "itemimages/isharb/isharb1.jpeg"
+      "./itemimages/isharb/isharb1.jpeg"
     ],
     "availableSizes": [
       "كبير"
@@ -481,9 +481,9 @@
       "كبير"
     ],
     "imageURLs": [
-      "itemimages/isharb/kashmir_5atstrass.jpeg",
-      "itemimages/isharb/kashmir5tut2.jpeg",
-      "itemimages/isharb/kashmirdantel.jpeg"
+      "./itemimages/isharb/kashmir_5atstrass.jpeg",
+      "./itemimages/isharb/kashmir5tut2.jpeg",
+      "./itemimages/isharb/kashmirdantel.jpeg"
     ],
     "descriptionAR": "نقشات عديدة",
     "inStock": true,
@@ -503,7 +503,7 @@
       "كبير"
     ],
     "imageURLs": [
-      "itemimages/isharb/kashmir5tut.jpeg"
+      "./itemimages/isharb/kashmir5tut.jpeg"
     ],
     "descriptionAR": "جودة اماراتية فاخرة",
     "inStock": true,
@@ -521,7 +521,7 @@
       "كبير"
     ],
     "imageURLs": [
-      "itemimages/isharb/kashmir5tut.jpeg"
+      "./itemimages/isharb/kashmir5tut.jpeg"
     ],
     "descriptionAR": "جودة فاخرة #1 - ايشارب اماراتي مميز -  العديد من النقشات",
     "inStock": true,
@@ -545,7 +545,7 @@
     ],
     "inStock": true,
     "imageURLs": [
-      "itemimages/logo.png"
+      "./itemimages/logo.png"
     ],
     "discountedPrice": 4
   },
@@ -563,7 +563,7 @@
     ],
     "inStock": true,
     "imageURLs": [
-      "itemimages/logo.png"
+      "./itemimages/logo.png"
     ],
     "discountedPrice": 6
   },
@@ -579,7 +579,7 @@
       "قطن نسواني","قطن بناتي","ليكرا نسواني"
     ],
     "imageURLs": [
-      "itemimages/logo.png"
+      "./itemimages/logo.png"
     ],
     "inStock": true,
     "discountedPrice": 2
@@ -596,7 +596,7 @@
       "علبة"
     ],
     "imageURLs": [
-      "itemimages/logo.png"
+      "./itemimages/logo.png"
     ],
     "descriptionAR": "الأصلي",
     "inStock": true,
@@ -610,7 +610,7 @@
     "nameAR": "دبابيس حرير prc",
     "price": 2.5,
     "imageURLs": [
-      "itemimages/logo.png"
+      "./itemimages/logo.png"
     ],
     "descriptionAR": "الأصلي",
     "inStock": true,
