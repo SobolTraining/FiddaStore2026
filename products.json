@@ -1,0 +1,624 @@
+{
+  "AB-202": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "سما باب اول",
+    "price": 25,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/sama.jpeg"
+    ],
+    "descriptionAR": "الخيار العملي والاقتصادي الرائع - نوعية جيدة جدا ",
+    "inStock": true,
+    "discountedPrice": 17.5
+  },
+  "AB-201": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "كينزو باب أول - كريب",
+    "price": 35,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "defaultVariantID": "60",
+    "imageURLs": [
+      "itemimages/abaya/ras/kenzo.jpeg"
+    ],
+    "descriptionAR": "مفتوحة,مسكرة",
+    "inStock": true,
+    "discountedPrice": 26.25
+  },
+  "AB-203": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "ربى الحرير مسكر ومفتوح",
+    "price": 35,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+     "imageURLs": [
+      "itemimages/abaya/ras/ruba.jpeg"
+    ],
+    "descriptionAR": "عملية, يومية ومرتبة - متوفرة مسكرة ومفتوحة قصة لبنانية وعراقية",
+    "inStock": true,
+    "discountedPrice": 28
+  },
+  "AB-007": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": " حرير اندونيسي أصلي",
+    "price": 65,
+    "availableSizes": [
+      "60",
+      "62",
+      "64"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/badr.jpeg"
+    ],
+    "descriptionAR": "حرير اندونيسي سواد رائع ووزن خفيف على الرأس - متوفرة فجة وفجتين مفتوح - وفجة مسكر",
+    "inStock": true,
+    "discountedPrice": 54
+  },
+  
+  "AB-004": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "الهديلة- الأخف#1 - فجة",
+    "price": 65,
+    "availableSizes": [
+      "58",
+      "60",
+      "62",
+      "64"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/sawadlel.jpeg"
+    ],
+    "descriptionAR": "الأخف على الرأس: فجة - سواد قوي وصفر لمعة - خيار رائع",
+    "inStock": true,
+    "discountedPrice": 52
+  },
+  "AB-001": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "ألماس فجتين - الأخف",
+    "price": 80,
+    "availableSizes": [
+      "58",
+      "60",
+      "62",
+      "65"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/almas.jpeg"
+    ],
+    "descriptionAR": "الأخف على الرأس: فجتين - سواد قوي وصفر لمعة - عباءة كويتية فاخرة",
+    "inStock": true,
+    "discountedPrice": 64
+  },
+  
+
+
+  "AB-008": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "فطوم ",
+    "price": 65,
+    "availableSizes": [
+      "58",
+      "60",
+      "62",
+      "64"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/fattum1.jpeg",
+      "itemimages/abaya/ras/fattum2.jpeg",
+      "itemimages/abaya/ras/fattum3.jpeg"
+    ],
+    "descriptionAR": "فطوم تقيل - خفيفة جدا على الرأس ولا تخايل - ",
+    "inStock": true,
+    "discountedPrice": 55.25
+  },
+  "AB-009": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "سوبر فاين",
+    "price": 70,
+    "availableSizes": [
+      "58",
+      "60",
+      "62",
+      "64"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/superfine.jpeg"
+    ],
+    "descriptionAR": "عباءة كويتية فجتين فقط - لمعة - خفيفة جدا على الرأس",
+    "inStock": true,
+    "discountedPrice": 60
+  },
+  
+  "AB-002": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "سوبر فاين ريش نعام",
+    "price": 80,
+    "availableSizes": [
+      "58",
+      "60",
+      "62",
+      "66"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/sawadlel2.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 64
+  },
+  "AB-003": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "أشرفية - عباءة رقم 1",
+    "price": 75,
+    "availableSizes": [
+      "60",
+      "62",
+      "64"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ras/ashrafeye1.jpeg",
+      "itemimages/abaya/ras/ashrafeye2.jpeg",
+      "itemimages/abaya/ras/ashrafeye3.jpeg"
+    ],
+    "descriptionAR": "العباءة الفاخرة رقم 1 - احفظي اسمها جيّدا",
+    "inStock": true,
+    "discountedPrice": 62
+  },
+
+
+
+
+
+
+  "AB-100": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": " كتف- قصة واسعة ",
+    "price": 25,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/ktfwes3a.jpeg"
+    ],
+    "descriptionAR": "الأكمام بدون ستراس",
+    "inStock": true,
+    "discountedPrice": 17.5
+  },
+  "AB-101": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": " دوبل كلوش حرير",
+    "price": 38,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/versacci7arir.jpeg",
+      "itemimages/abaya/ktf/doubleklosh1.jpeg",
+      "itemimages/abaya/ktf/doubleklosh2.jpeg"
+    ],
+    "descriptionAR": "قصة دوبل كلوش - الاختلاف بنقشة الاكمام",
+    "inStock": true,
+    "discountedPrice": 30.4
+  },
+  "AB-102": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": " دوبل كلوش كريب",
+    "price": 28,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/doubleklosh1.jpeg",
+      "itemimages/abaya/ktf/doubleklosh2.jpeg"
+    ],
+    "descriptionAR": "قصة دوبل كلوش - الاختلاف بنقشة الاكمام",
+    "inStock": true,
+    "discountedPrice": 22.4
+  },
+  "AB-103": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": " فراشة - كريب",
+    "price": 28,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/farashe.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 24.92
+  },
+  "AB-104": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": "فراشة الهدى- حرير",
+    "price": 38,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/huda1.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 32.3
+  },
+  "AB-105": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": " كلوش سحاب- كريب",
+    "price": 28,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/se7ab.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 24.92
+  },
+  "AB-106": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات كتف"
+    ],
+    "nameAR": " كلوش سحاب - حرير",
+    "price": 38,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "imageURLs": [
+      "itemimages/abaya/ktf/se7ab.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 32.3
+  },
+ 
+  "EX-03": {
+    "category": "AbayaEssentials",
+    "subCategory": ["إضافات الزي (دبابيس، كلساتات)"],
+    "nameAR": "قمطة سوداء super",
+    "price": 1,
+    "imageURLs": ["itemimages/amta.jpeg"],
+    "inStock": true,
+    "discountedPrice": 1,
+    "availableSizes": [
+      "ابيض", "اسود"
+    ]
+  },
+
+  
+  "EX-04": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إضافات الزي (دبابيس، كلساتات)"
+    ],
+    "nameAR": "تنورة تحت العباءة",
+    "price": 10,
+    "availableSizes": [
+      "S-M",
+      "L-XL"
+    ],
+    "imageURLs": [
+      "itemimages/tanura.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 7
+  },
+
+
+
+
+
+  "IR-711": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "كريب سادة هدل ",
+    "price": 10,
+    "descriptionAR": "نوعية كريب غير ثقيل - هدل وجودة مميزة",
+    "inStock": true,
+    "discountedPrice": 7,
+    "availableSizes": [
+      "كبير"
+    ],
+    "imageURLs": [
+      "itemimages/isharb/crep.jpeg"
+    ]
+  },
+  "IR-712": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "availableSizes": [
+      "كبير"
+    ],
+    "nameAR": "كريب هدل مع دانتيل (نقشات( ",
+    "price": 14,
+    "descriptionAR": "نوعية كريب غير ثقيل - هدل وجودة مميزة",
+    "inStock": true,
+    "discountedPrice": 9,
+    "imageURLs": [
+      "itemimages/isharb/crepd1.jpeg"
+    ]
+  },
+
+  "IR-006": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "خليجي سادة",
+    "price": 15,
+    "availableSizes": [
+      "كبير"
+    ],
+    "imageURLs": [
+      "itemimages/isharb/5alijiseda.jpeg"
+    ],
+    "inStock": true,
+    "discountedPrice": 10
+  },
+
+"IR-710": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "خليجي دانتيل ",
+    "price": 17,
+    "imageURLs": [
+      "itemimages/isharb/isharb1.jpeg"
+    ],
+    "availableSizes": [
+      "كبير"
+    ],
+    "descriptionAR": "العديد من النقشات",
+    "inStock": true,
+    "discountedPrice": 12
+  },
+
+
+
+  "IR-002": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "كشمير سادة ونقشات ",
+    "price": 22,
+    "availableSizes": [
+      "كبير"
+    ],
+    "imageURLs": [
+      "itemimages/isharb/kashmir_5atstrass.jpeg",
+      "itemimages/isharb/kashmir5tut2.jpeg",
+      "itemimages/isharb/kashmirdantel.jpeg"
+    ],
+    "descriptionAR": "نقشات عديدة",
+    "inStock": true,
+    "discountedPrice": 20
+  },
+
+
+  
+  "IR-005": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": " اماراتي",
+    "price": 25,
+    "availableSizes": [
+      "كبير"
+    ],
+    "imageURLs": [
+      "itemimages/isharb/kashmir5tut.jpeg"
+    ],
+    "descriptionAR": "جودة اماراتية فاخرة",
+    "inStock": true,
+    "discountedPrice": 20
+  },
+  
+  "IR-003": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "اماراتي الأول- فراشة",
+    "price": 25,
+    "availableSizes": [
+      "كبير"
+    ],
+    "imageURLs": [
+      "itemimages/isharb/kashmir5tut.jpeg"
+    ],
+    "descriptionAR": "جودة فاخرة #1 - ايشارب اماراتي مميز -  العديد من النقشات",
+    "inStock": true,
+    "discountedPrice": 24
+  },
+  
+
+
+
+  "IR-713": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "حجاب بناتي  عادي",
+    "price": 5,
+    "availableSizes": [
+      "ابيض",
+      "اسود",
+      "كحلي"
+    ],
+    "inStock": true,
+    "imageURLs": [
+      "itemimages/logo.png"
+    ],
+    "discountedPrice": 4
+  },
+  "IR-714": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إيشاربات"
+    ],
+    "nameAR": "حجاب بناتي super",
+    "price": 8,
+    "availableSizes": [
+      "ابيض",
+      "اسود",
+      "كحلي"
+    ],
+    "inStock": true,
+    "imageURLs": [
+      "itemimages/logo.png"
+    ],
+    "discountedPrice": 6
+  },
+  
+  "Z-003": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "زنود"
+    ],
+    "nameAR": "زنود اسود سادة",
+    "price": 3,
+    "availableSizes": [
+      "قطن نسواني","قطن بناتي","ليكرا نسواني"
+    ],
+    "imageURLs": [
+      "itemimages/logo.png"
+    ],
+    "inStock": true,
+    "discountedPrice": 2
+  },
+  
+  "EX-01a": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إضافات الزي (دبابيس، كلساتات)"
+    ],
+    "nameAR": "دبابيس حرير-تركي",
+    "price": 3,
+    "availableSizes": [
+      "علبة"
+    ],
+    "imageURLs": [
+      "itemimages/logo.png"
+    ],
+    "descriptionAR": "الأصلي",
+    "inStock": true,
+    "discountedPrice": 2.7
+  },
+  "EX-02a": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "إضافات الزي (دبابيس، كلساتات)"
+    ],
+    "nameAR": "دبابيس حرير prc",
+    "price": 2.5,
+    "imageURLs": [
+      "itemimages/logo.png"
+    ],
+    "descriptionAR": "الأصلي",
+    "inStock": true,
+    "availableSizes": [
+      "علبة"
+    ],
+    "discountedPrice": 2
+  }
+  
+  
+}
