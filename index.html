@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر دار فِضّة</title>
+    <title>متجر فضة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style-v2-test.css">
+    <link rel="stylesheet" href="style-v2-test.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/modals.css">
+    
     <script type="module" src="js/app.js"></script>
 </head>
-
 <body>
+
     <header id="main-header">
         <div class="header-top-row">
             <div class="logo">
-                <h1>متجر دار فِضّة</h1>
+                <h1>متجر فضة</h1>
             </div>
             
             <div id="cart-btn">
@@ -25,23 +31,32 @@
         <div id="navigation-bars-container">
             <nav id="nav-group-1" class="main-nav-group">
                 <ul class="main-nav-list-ul">
+                    <li class="nav-item" data-category="Prayer">مستلزمات الصلاة</li>
                     <li class="nav-item" data-category="AbayaEssentials">العباءة ومستلزماتها</li>
-                    <li class="nav-item">مستلزمات الصلاة</li>
-                    <li class="nav-item"> مكلفات</li>
-                    <li class="nav-item" >المكتبة</li>
-                    <li class="nav-item">الحقائب</li>
+                    <li class="nav-item" data-category="Library">المكتبة</li>
+                    <li class="nav-item" data-category="Bags">الحقائب</li>
                 </ul>
             </nav>
-        
+            <nav id="nav-group-2" class="main-nav-group">
+                <ul class="main-nav-list-ul">
+                    <li class="nav-item" data-category="Almokallafat">المكلفات</li>
+                    <li class="nav-item" data-category="Gifts">هدايا وتحف</li>
+                    <li class="nav-item" data-category="Almunasabat">المناسبات الدينية</li>
+                    <li class="nav-item" data-category="">قريبا</li>
+                </ul>
+            </nav>
         </div>
-
-
-
     </header>
 
     <main class="main-container">
         
-        
+        <aside id="side-nav-container">
+            <div class="side-nav-header">
+                <h4>تصفية حسب الأقسام الفرعية:</h4>
+            </div>
+            <ul id="sub-category-list">
+                </ul>
+        </aside>
 
         <div class="main-content-areas">
 
@@ -51,8 +66,9 @@
 
             <section id="products-section">
                 <h2 class="section-title">
-                   أهلا بكنّ: العروضات الكبيرة مستمرة لمدة يومين
+                   أهلا بكنّ: العروضات الكبيرة مستمرة لمدة يومين في قسم العباءة ومستلزماتها،الحسومات مساهمة عن ارواح شهدائنا الأعزاء 
                 </h2>
+                
                 <h1 class="section-title">
                    ملاحظة: 
                    النقشات عديدة ومختلفة لعباءات الكتف دوبل كلوش (الاختلاف عند الكم)
@@ -67,7 +83,10 @@
                 <div id="products-container">
                     </div>
             </section>
+            
 
+            
+            
         </div>
 
     </main>
@@ -121,6 +140,10 @@
 
                 <textarea id="address" placeholder="العنوان بالكامل (الحي، الشارع) *" rows="3" required></textarea>
 
+                <div class="promo-code-container">
+                    <input type="text" id="promo-code-input" placeholder="رمز الخصم (اختياري)">
+                    <button type="button" id="apply-promo-btn">تطبيق</button>
+                </div>
 
                 <textarea id="notes" placeholder="ملاحظات إضافية (اختياري)" rows="2"></textarea>
                 
@@ -130,12 +153,13 @@
 
         </div>
     </div>
-    
+
     <div id="product-details-modal" class="modal">
     <div class="checkout-modal product-modal-content">
         <button class="close-modal-btn" data-modal-id="product-details-modal">&times;</button>
         
         <div class="product-details-container">
+            
             <div class="modal-product-image-section">
                 <img id="modal-product-image" src="" alt="صورة المنتج" class="modal-product-image">
                 <h2 id="modal-product-name" class="modal-product-name">اسم المنتج</h2>
@@ -179,7 +203,7 @@
 
 
     <footer id="main-footer">
-        جميع الحقوق محفوظة &copy; نسخة مؤقتة | متجر فضة 2026
+        جميع الحقوق محفوظة &copy; متجر فضة 2026 | نسخة مؤقتة
     </footer>
 
     <script src="script.js"></script>
