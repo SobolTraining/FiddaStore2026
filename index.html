@@ -6,15 +6,8 @@
     <title>متجر فضة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="style-v2-test.css">
-    <link rel="stylesheet" href="style-v2-test.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/modals.css">
-    
-    <script type="module" src="js/app.js"></script>
-</head>
 <body>
 
     <header id="main-header">
@@ -22,7 +15,6 @@
             <div class="logo">
                 <h1>متجر فضة</h1>
             </div>
-            
             <div id="cart-btn">
                 <i class="fas fa-shopping-cart"></i> السلة (<span id="cart-count">0</span>)
             </div>
@@ -49,86 +41,52 @@
     </header>
 
     <main class="main-container">
-        
-        <aside id="side-nav-container">
-            <div class="side-nav-header">
-                <h4>تصفية حسب الأقسام الفرعية:</h4>
-            </div>
-            <ul id="sub-category-list">
-                </ul>
-        </aside>
-
         <div class="main-content-areas">
-
             <section id="promo-carousel-container">
                سيمرّ كلّ مر، وأجر صمودكم يبقى  
             </section>
 
             <section id="products-section">
                 <h2 class="section-title">
-                   أهلا بكنّ: العروضات الكبيرة مستمرة لمدة يومين في قسم العباءة ومستلزماتها،الحسومات مساهمة عن ارواح شهدائنا الأعزاء 
+                   أهلا بكنّ: العروضات الكبيرة مستمرة لمدة يومين في قسم العباءة ومستلزماتها، 
                 </h2>
-                
+                <h2 class="section-title">
+                    الحسومات مساهمةعن روح شهيد 
+                </h2>
                 <h1 class="section-title">
                    ملاحظة: 
                    النقشات عديدة ومختلفة لعباءات الكتف دوبل كلوش (الاختلاف عند الكم)
                    + النقشات عديدة لدانتيل الايشاربات 
-                                     
+                                         
                    --- سيتم التواصل معكم عبر الواتساب بعد تأكيد الطلب لتثبيت التفاصيل
                 </h1>
             </section>
 
             <section id="products-section">
                 <h2 class="section-title">جميع منتجات هذا القسم</h2>
-                <div id="products-container">
-                    </div>
+                <div id="products-container"></div>
             </section>
-            
-
-            
-            
         </div>
-
     </main>
     
     <div id="checkout-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>إتمام عملية الشراء</h2>
-
-            <div id="checkout-details">
-                </div>
-
+            <div id="checkout-details"></div>
             <div class="invoice-summary">
-                <div class="summary-line">
-                    <span>الإجمالي:</span>
-                    <span id="subtotal">$ 0.00</span>
-                </div>
-                <div class="summary-line">
-                    <span>الخصم:</span>
-                    <span id="discount-amount">$ 0.00</span>
-                </div>
-                <div class="summary-line">
-                    <span>رسوم التوصيل:</span>
-                    <span id="shipping-fee">$ 4.00</span>
-                </div>
-                <div class="total-line">
-                    <span>المجموع الكلي:</span>
-                    <span id="final-total">$ 4.00</span>
-                </div>
+                <div class="summary-line"><span>الإجمالي:</span> <span id="subtotal">$ 0.00</span></div>
+                <div class="summary-line"><span>الخصم:</span> <span id="discount-amount">$ 0.00</span></div>
+                <div class="summary-line"><span>رسوم التوصيل:</span> <span id="shipping-fee">$ 4.00</span></div>
+                <div class="total-line"><span>المجموع الكلي:</span> <span id="final-total">$ 4.00</span></div>
             </div>
-
             <hr style="margin: 15px 0;">
-
             <form id="checkout-form">
-                
                 <input type="text" id="name" placeholder="الاسم الكامل *" required>
-                
                 <div class="phone-input-group">
                     <span class="country-code">+961</span> 
                     <input type="text" id="phone" placeholder="رقم الهاتف (للتواصل 8 أرقام) *" required pattern="[0-9]{8}" minlength="8" maxlength="8">
                 </div>
-                
                 <select id="region-select" required>
                     <option value="" disabled selected>--- اختر المنطقة * ---</option>
                     <option value="Beirut">بيروت</option>
@@ -137,68 +95,43 @@
                     <option value="Nabatieh">النبطية</option>
                     <option value="Other">مناطق أخرى</option>
                 </select>
-
                 <textarea id="address" placeholder="العنوان بالكامل (الحي، الشارع) *" rows="3" required></textarea>
-
                 <div class="promo-code-container">
                     <input type="text" id="promo-code-input" placeholder="رمز الخصم (اختياري)">
                     <button type="button" id="apply-promo-btn">تطبيق</button>
                 </div>
-
                 <textarea id="notes" placeholder="ملاحظات إضافية (اختياري)" rows="2"></textarea>
-                
                 <button type="submit" class="cta-button">إتمام الطلب الآن</button>
                 <p class="note">سيتم التواصل معك لتأكيد الطلب وتفاصيل الدفع.</p>
             </form>
-
         </div>
     </div>
 
     <div id="product-details-modal" class="modal">
-    <div class="checkout-modal product-modal-content">
-        <button class="close-modal-btn" data-modal-id="product-details-modal">&times;</button>
-        
-        <div class="product-details-container">
-            
-            <div class="modal-product-image-section">
-                <img id="modal-product-image" src="" alt="صورة المنتج" class="modal-product-image">
-                <h2 id="modal-product-name" class="modal-product-name">اسم المنتج</h2>
-            </div>
-            
-            <div class="modal-product-info-section">
-                
-                <p class="section-title">الوصف المفصَّل:</p>
-                <div id="modal-product-description" class="modal-product-description">
-                    </div>
-                
-                <hr>
-
-                <div class="modal-price-status-section">
-                    <p class="section-title">السعر:</p>
-                    <div class="price-section">
-                        <span id="modal-current-price" class="current-price">$ 0.00</span>
-                        <span id="modal-old-price" class="old-price"></span>
-                    </div>
-                    <div id="modal-stock-status" class="stock-status in-stock">
-                        </div>
+        <div class="product-modal-content">
+            <button class="close-modal-btn" data-modal-id="product-details-modal">&times;</button>
+            <div class="product-details-container">
+                <div class="modal-product-image-section">
+                    <img id="modal-product-image" src="" alt="صورة المنتج" class="modal-product-image">
+                    <h2 id="modal-product-name" class="modal-product-name">اسم المنتج</h2>
                 </div>
-
-                <hr>
-                
-                <div class="modal-actions-section">
-                    
-                    <p class="section-title">خيارات الشراء:</p>
-                    
-                    <select id="modal-size-select" class="size-select" required>
-                        <option value="" disabled selected>--- اختر المقاس/النوع * ---</option>
-                        </select>
-
-                    <button type="button" id="modal-add-to-cart-btn" class="add-to-cart-btn">أضف للسلة</button>
+                <div class="modal-product-info-section">
+                    <p class="section-title">الوصف المفصَّل:</p>
+                    <div id="modal-product-description" class="modal-product-description"></div>
+                    <hr>
+                    <div class="modal-price-status-section">
+                        <p class="section-title">السعر:</p>
+                        <div class="price-section">
+                            <span id="modal-current-price" class="current-price">$ 0.00</span>
+                            <span id="modal-old-price" class="old-price"></span>
+                        </div>
+                        <div id="modal-stock-status" class="stock-status in-stock"></div>
+                    </div>
+                    <hr>
                     
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 
