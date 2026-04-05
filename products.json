@@ -47,7 +47,28 @@
     "subCategory": [
       "عباءات رأس"
     ],
-    "nameAR": "ربى الحرير مسكر ومفتوح",
+    "nameAR": "ربى الحرير مفتوح",
+    "price": 35,
+    "availableSizes": [
+      "xs",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+     "imageURLs": [
+      "itemimages/abaya/ras/ruba.jpeg"
+    ],
+    "descriptionAR": "عملية, يومية ومرتبة - متوفرة مسكرة ومفتوحة قصة لبنانية وعراقية",
+    "inStock": true,
+    "discountedPrice": 28
+  },
+  "AB-204": {
+    "category": "AbayaEssentials",
+    "subCategory": [
+      "عباءات رأس"
+    ],
+    "nameAR": "ربى الحرير مسكر ",
     "price": 35,
     "availableSizes": [
       "xs",
@@ -80,7 +101,7 @@
     ],
     "descriptionAR": "حرير اندونيسي سواد رائع ووزن خفيف على الرأس - متوفرة فجة وفجتين مفتوح - وفجة مسكر",
     "inStock": true,
-    "discountedPrice": 54
+    "discountedPrice": 58
   },
   
   "AB-004": {
@@ -97,11 +118,11 @@
       "64"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/sawadlel.jpeg"
+      "itemimages/abaya/ras/sawadlel2.jpeg"
     ],
     "descriptionAR": "الأخف على الرأس: فجة - سواد قوي وصفر لمعة - خيار رائع",
     "inStock": true,
-    "discountedPrice": 52
+    "discountedPrice": 58
   },
   "AB-001": {
     "category": "AbayaEssentials",
@@ -121,7 +142,7 @@
     ],
     "descriptionAR": "الأخف على الرأس: فجتين - سواد قوي وصفر لمعة - عباءة كويتية فاخرة",
     "inStock": true,
-    "discountedPrice": 64
+    "discountedPrice": 75
   },
   
 
@@ -148,26 +169,7 @@
     "inStock": true,
     "discountedPrice": 55
   },
-  "AB-009": {
-    "category": "AbayaEssentials",
-    "subCategory": [
-      "عباءات رأس"
-    ],
-    "nameAR": "سوبر فاين",
-    "price": 70,
-    "availableSizes": [
-      "58",
-      "60",
-      "62",
-      "64"
-    ],
-    "imageURLs": [
-      "itemimages/abaya/ras/superfine.jpeg"
-    ],
-    "descriptionAR": "عباءة كويتية فجتين فقط - لمعة - خفيفة جدا على الرأس",
-    "inStock": true,
-    "discountedPrice": 66
-  },
+  
   
   "AB-002": {
     "category": "AbayaEssentials",
@@ -183,10 +185,10 @@
       "66"
     ],
     "imageURLs": [
-      "itemimages/abaya/ras/sawadlel2.jpeg"
+      "itemimages/abaya/ras/superfine.jpeg"
     ],
     "inStock": true,
-    "discountedPrice": 64
+    "discountedPrice": 70
   },
   "AB-003": {
     "category": "AbayaEssentials",
@@ -194,7 +196,7 @@
       "عباءات رأس"
     ],
     "nameAR": "أشرفية - عباءة رقم 1",
-    "price": 75,
+    "price": 80,
     "availableSizes": [
       "60",
       "62",
@@ -207,7 +209,7 @@
     ],
     "descriptionAR": "العباءة الفاخرة رقم 1 - احفظي اسمها جيّدا",
     "inStock": true,
-    "discountedPrice": 64
+    "discountedPrice": 70
   },
 
 
@@ -298,7 +300,7 @@
     "imageURLs": [
       "itemimages/abaya/ktf/farashe.jpeg"
     ],
-    "inStock": true,
+    "inStock": false,
     "discountedPrice": 23
   },
   "AB-104": {
@@ -318,7 +320,7 @@
     "imageURLs": [
       "itemimages/abaya/ktf/huda1.jpeg"
     ],
-    "inStock": true,
+    "inStock": false,
     "discountedPrice": 32
   },
   "AB-105": {
@@ -338,7 +340,7 @@
     "imageURLs": [
       "itemimages/abaya/ktf/se7ab.jpeg"
     ],
-    "inStock": true,
+    "inStock": false,
     "discountedPrice": 22
   },
   "AB-106": {
@@ -358,7 +360,7 @@
     "imageURLs": [
       "itemimages/abaya/ktf/se7ab.jpeg"
     ],
-    "inStock": true,
+    "inStock": false,
     "discountedPrice": 31
   },
  
